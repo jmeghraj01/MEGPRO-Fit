@@ -1,0 +1,15 @@
+
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#F28C45">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+
+<script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register(
+      "/MEGPRO-Fit/sw.js",
+      { scope: "/MEGPRO-Fit/" }
+    ).catch(console.error);
+  });
+}
+</script>
